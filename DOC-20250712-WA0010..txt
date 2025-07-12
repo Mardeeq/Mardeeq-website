@@ -1,0 +1,1739 @@
+
+
+<meta name='viewport' content='width=device-width, initial-scale=1'/><!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mardeeq Ltd | Bridal Fashion & Trade</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;700&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <style>
+        /* ===== Global Styles ===== */
+        :root {
+            --primary: #d4af8f; /* Soft gold */
+            --secondary: #8b5a2b; /* Earthy brown */
+            --accent: #e8c4c4; /* Blush pink */
+            --light: #fff9f6; /* Cream white */
+            --dark: #3a2e26; /* Dark brown */
+            --text: #5a4a42; /* Soft brown text */
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Montserrat', sans-serif;
+            background-color: var(--light);
+            color: var(--text);
+            line-height: 1.7;
+        }
+
+        h1, h2, h3, h4 {
+            font-family: 'Playfair Display', serif;
+            color: var(--dark);
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 12px 28px;
+            border-radius: 30px;
+            font-weight: 600;
+            transition: all 0.3s ease;
+        }
+
+        .btn-primary {
+            background: var(--primary);
+            color: white;
+            border: 2px solid var(--primary);
+        }
+
+        .btn-primary:hover {
+            background: transparent;
+            color: var(--primary);
+        }
+
+        .btn-secondary {
+            background: transparent;
+            color: var(--primary);
+            border: 2px solid var(--primary);
+        }
+
+        .btn-secondary:hover {
+            background: var(--primary);
+            color: white;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+
+        .section-title h2 {
+            font-size: 2.5rem;
+            margin-bottom: 15px;
+            position: relative;
+            display: inline-block;
+        }
+
+        .section-title h2::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 3px;
+            background: var(--primary);
+        }
+
+        .section-title p {
+            max-width: 700px;
+            margin: 0 auto;
+            color: var(--text);
+        }
+
+        /* ===== Header ===== */
+        header {
+            background: rgba(255, 249, 246, 0.95);
+            box-shadow: 0 2px 15px rgba(0, 0, 0, 0.05);
+            position: fixed;
+            width: 100%;
+            z-index: 1000;
+            padding: 15px 0;
+            transition: all 0.3s ease;
+        }
+
+        .header-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: var(--dark);
+        }
+
+        .logo span {
+            color: var(--primary);
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 30px;
+        }
+
+        nav ul li a {
+            font-weight: 500;
+            position: relative;
+        }
+
+        nav ul li a::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: var(--primary);
+            transition: width 0.3s ease;
+        }
+
+        nav ul li a:hover::after {
+            width: 100%;
+        }
+
+        /* ===== Hero Section ===== */
+        .hero {
+            background: linear-gradient(rgba(255, 249, 246, 0.8), rgba(255, 249, 246, 0.8)), 
+                        url('https://images.unsplash.com/photo-1519683109079-d5f539e1542f?ixlib=rb-4.0.3&auto=format&fit=crop&w=1170&q=80') no-repeat center/cover;
+            padding: 180px 0 100px;
+            text-align: center;
+        }
+
+        .hero h1 {
+            font-size: 3.5rem;
+            margin-bottom: 20px;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            max-width: 700px;
+            margin: 0 auto 30px;
+        }
+
+        .hero-buttons {
+            display: flex;
+            gap: 15px;
+            justify-content: center;
+        }
+
+        /* ===== About Section ===== */
+        .about {
+            padding: 100px 0;
+            background: white;
+        }
+
+        .about-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 50px;
+            align-items: center;
+        }
+
+        .about-img {
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+        }
+
+        .about-img img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        .about-content h3 {
+            font-size: 2rem;
+            margin-bottom: 20px;
+        }
+
+        .about-content p {
+            margin-bottom: 20px;
+        }
+
+        /* ===== Services Section ===== */
+        .services {
+            padding: 100px 0;
+            background: var(--light);
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+
+        .service-card {
+            background: white;
+            border-radius: 15px;
+            padding: 30px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+            text-align: center;
+            transition: transform 0.3s ease;
+        }
+
+        .service-card:hover {
+            transform: translateY(-10px);
+        }
+
+        .service-icon {
+            width: 80px;
+            height: 80px;
+            background: var(--accent);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 20px;
+            color: var(--secondary);
+            font-size: 30px;
+        }
+
+        .service-card h3 {
+            font-size: 1.5rem;
+            margin-bottom: 15px;
+        }
+
+        /* ===== Collections Section ===== */
+        .collections {
+            padding: 100px 0;
+            background: white;
+        }
+
+        .collections-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 25px;
+        }
+
+        .collection-item {
+            position: relative;
+            border-radius: 15px;
+            overflow: hidden;
+            height: 350px;
+        }
+
+        .collection-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+
+        .collection-item:hover img {
+            transform: scale(1.1);
+        }
+
+        .collection-overlay {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            padding: 20px;
+            background: linear-gradient(to top, rgba(0, 0, 0, 0.7), transparent);
+            color: white;
+        }
+
+        .collection-overlay h3 {
+            font-size: 1.5rem;
+            margin-bottom: 5px;
+        }
+
+        /* ===== Testimonials ===== */
+        .testimonials {
+            padding: 100px 0;
+            background: var(--light);
+        }
+
+        .testimonial-slider {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .testimonial-card {
+            background: white;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+            text-align: center;
+        }
+
+        .testimonial-avatar {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            overflow: hidden;
+            margin: 0 auto 20px;
+        }
+
+        .testimonial-avatar img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .testimonial-content p {
+            font-style: italic;
+            margin-bottom: 20px;
+        }
+
+        .testimonial-author h4 {
+            font-size: 1.2rem;
+            margin-bottom: 5px;
+        }
+
+        .testimonial-author p {
+            color: var(--primary);
+            font-size: 0.9rem;
+        }
+
+        /* ===== Contact Section ===== */
+        .contact {
+            padding: 100px 0;
+            background: white;
+        }
+
+        .contact-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 50px;
+        }
+
+        .contact-info h3 {
+            font-size: 2rem;
+            margin-bottom: 20px;
+        }
+
+        .contact-details {
+            margin-bottom: 30px;
+        }
+
+        .contact-detail {
+            display: flex;
+            align-items: center;
+            margin-bottom: 15px;
+        }
+
+        .contact-icon {
+            width: 40px;
+            height: 40px;
+            background: var(--accent);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 15px;
+            color: var(--secondary);
+        }
+
+        .contact-form {
+            background: var(--light);
+            padding: 30px;
+            border-radius: 15px;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 500;
+        }
+
+        .form-group input,
+        .form-group textarea {
+            width: 100%;
+            padding: 12px 15px;
+            border: 1px solid #e0d6cc;
+            border-radius: 8px;
+            font-family: 'Montserrat', sans-serif;
+        }
+
+        .form-group textarea {
+            height: 150px;
+        }
+
+        .submit-btn {
+            background: var(--primary);
+            color: white;
+            border: none;
+            padding: 12px 30px;
+            border-radius: 30px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .submit-btn:hover {
+            background: var(--secondary);
+        }
+
+        /* ===== Footer ===== */
+        footer {
+            background: var(--dark);
+            color: white;
+            padding: 70px 0 20px;
+        }
+
+        .footer-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 40px;
+            margin-bottom: 50px;
+        }
+
+        .footer-col h4 {
+            font-size: 1.3rem;
+            margin-bottom: 25px;
+            position: relative;
+            padding-bottom: 10px;
+        }
+
+        .footer-col h4::after {
+            content: '';
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            width: 50px;
+            height: 2px;
+            background: var(--primary);
+        }
+
+        .footer-col p {
+            color: #c2b8ae;
+            margin-bottom: 20px;
+        }
+
+        .social-links {
+            display: flex;
+            gap: 15px;
+            margin-top: 20px;
+        }
+
+        .social-links a {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 40px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 50%;
+            transition: all 0.3s ease;
+        }
+
+        .social-links a:hover {
+            background: var(--primary);
+            transform: translateY(-3px);
+        }
+
+        .footer-col ul {
+            list-style: none;
+        }
+
+        .footer-col ul li {
+            margin-bottom: 12px;
+        }
+
+        .footer-col ul li a {
+            color: #c2b8ae;
+            transition: color 0.3s ease;
+        }
+
+        .footer-col ul li a:hover {
+            color: var(--primary);
+        }
+
+        .copyright {
+            text-align: center;
+            padding-top: 20px;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            color: #c2b8ae;
+            font-size: 0.9rem;
+        }
+
+        /* ===== Responsive Design ===== */
+        @media (max-width: 992px) {
+            .about-container {
+                grid-template-columns: 1fr;
+            }
+
+            .about-img {
+                order: -1;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+
+            .contact-container {
+                grid-template-columns: 1fr;
+            }
+
+            nav ul {
+                display: none;
+            }
+        }
+
+        @media (max-width: 576px) {
+            .hero-buttons {
+                flex-direction: column;
+                gap: 10px;
+            }
+
+            .btn {
+                width: 100%;
+                text-align: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container header-container">
+            <div class="logo">Mardeeq <span>Ltd</span></div>
+            <nav>
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#collections">Collections</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="container">
+            <h1>Elegant Bridal Fashion & Trade</h1>
+            <p>Mardeeq Ltd specializes in exquisite bridal wear, wholesale trade, and fashion merchandise for discerning clients worldwide.</p>
+            <div class="hero-buttons">
+                <a href="#collections" class="btn btn-primary">View Collections</a>
+                <a href="#contact" class="btn btn-secondary">Contact Us</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about" id="about">
+        <div class="container">
+            <div class="section-title">
+                <h2>About Mardeeq Ltd</h2>
+                <p>Discover our journey in bringing luxury bridal fashion to the global market.</p>
+            </div>
+            <div class="about-container">
+                <div class="about-content">
+                    <h3>Your Trusted Bridal Fashion Partner</h3>
+                    <p>Founded in 2016, Mardeeq Ltd has established itself as a premier supplier of high-quality bridal wear, serving boutiques, retailers, and brides across the world.</p>
+                    <p>We combine traditional craftsmanship with contemporary designs to create stunning collections that cater to diverse tastes and cultures.</p>
+                    <a href="#services" class="btn btn-primary">Our Services</a>
+                </div>
+                <div class="about-img">
+                    <img src="https://images.unsplash.com/photo-1529633980627-4dfae1c2a0e3?ixlib=rb-4.0.3&auto=format&fit=crop&w=1170&q=80" alt="Bridal Fashion">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="services" id="services">
+        <div class="container">
+            <div class="section-title">
+                <h2>Our Services</h2>
+                <p>Comprehensive solutions for bridal fashion businesses and retailers.</p>
+            </div>
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-tshirt"></i>
+                    </div>
+                    <h3>Bridal Wear</h3>
+                    <p>Exquisite wedding dresses, veils, and accessories for brides and boutiques.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-people-carry"></i>
+                    </div>
+                    <h3>Wholesale Trade</h3>
+                    <p>Bulk orders for retailers with competitive pricing and flexible terms.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon"><!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mardeeq Ltd | Bridal Fashion & Trade</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;700&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <style>
+        /* ===== Global Styles ===== */
+        :root {
+            --primary: #d4af8f; /* Soft gold */
+            --secondary: #8b5a2b; /* Earthy brown */
+            --accent: #e8c4c4; /* Blush pink */
+            --light: #fff9f6; /* Cream white */
+            --dark: #3a2e26; /* Dark brown */
+            --text: #5a4a42; /* Soft brown text */
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Montserrat', sans-serif;
+            background-color: var(--light);
+            color: var(--text);
+            line-height: 1.7;
+        }
+
+        h1, h2, h3, h4 {
+            font-family: 'Playfair Display', serif;
+            color: var(--dark);
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 12px 28px;
+            border-radius: 30px;
+            font-weight: 600;
+            transition: all 0.3s ease;
+        }
+
+        .btn-primary {
+            background: var(--primary);
+            color: white;
+            border: 2px solid var(--primary);
+        }
+
+        .btn-primary:hover {
+            background: transparent;
+            color: var(--primary);
+        }
+
+        .btn-secondary {
+            background: transparent;
+            color: var(--primary);
+            border: 2px solid var(--primary);
+        }
+
+        .btn-secondary:hover {
+            background: var(--primary);
+            color: white;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+
+        .section-title h2 {
+            font-size: 2.5rem;
+            margin-bottom: 15px;
+            position: relative;
+            display: inline-block;
+        }
+
+        .section-title h2::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 3px;
+            background: var(--primary);
+        }
+
+        .section-title p {
+            max-width: 700px;
+            margin: 0 auto;
+            color: var(--text);
+        }
+
+        /* ===== Header ===== */
+        header {
+            background: rgba(255, 249, 246, 0.95);
+            box-shadow: 0 2px 15px rgba(0, 0, 0, 0.05);
+            position: fixed;
+            width: 100%;
+            z-index: 1000;
+            padding: 15px 0;
+            transition: all 0.3s ease;
+        }
+
+        .header-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: var(--dark);
+        }
+
+        .logo span {
+            color: var(--primary);
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 30px;
+        }
+
+        nav ul li a {
+            font-weight: 500;
+            position: relative;
+        }
+
+        nav ul li a::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: var(--primary);
+            transition: width 0.3s ease;
+        }
+
+        nav ul li a:hover::after {
+            width: 100%;
+        }
+
+        /* ===== Hero Section ===== */
+        .hero {
+            background: linear-gradient(rgba(255, 249, 246, 0.8), rgba(255, 249, 246, 0.8)), 
+                        url('https://images.unsplash.com/photo-1519683109079-d5f539e1542f?ixlib=rb-4.0.3&auto=format&fit=crop&w=1170&q=80') no-repeat center/cover;
+            padding: 180px 0 100px;
+            text-align: center;
+        }
+
+        .hero h1 {
+            font-size: 3.5rem;
+            margin-bottom: 20px;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            max-width: 700px;
+            margin: 0 auto 30px;
+        }
+
+        .hero-buttons {
+            display: flex;
+            gap: 15px;
+            justify-content: center;
+        }
+
+        /* ===== About Section ===== */
+        .about {
+            padding: 100px 0;
+            background: white;
+        }
+
+        .about-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 50px;
+            align-items: center;
+        }
+
+        .about-img {
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+        }
+
+        .about-img img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        .about-content h3 {
+            font-size: 2rem;
+            margin-bottom: 20px;
+        }
+
+        .about-content p {
+            margin-bottom: 20px;
+        }
+
+        /* ===== Services Section ===== */
+        .services {
+            padding: 100px 0;
+            background: var(--light);
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+
+        .service-card {
+            background: white;
+            border-radius: 15px;
+            padding: 30px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+            text-align: center;
+            transition: transform 0.3s ease;
+        }
+
+        .service-card:hover {
+            transform: translateY(-10px);
+        }
+
+        .service-icon {
+            width: 80px;
+            height: 80px;
+            background: var(--accent);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 20px;
+            color: var(--secondary);
+            font-size: 30px;
+        }
+
+        .service-card h3 {
+            font-size: 1.5rem;
+            margin-bottom: 15px;
+        }
+
+        /* ===== Collections Section ===== */
+        .collections {
+            padding: 100px 0;
+            background: white;
+        }
+
+        .collections-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 25px;
+        }
+
+        .collection-item {
+            position: relative;
+            border-radius: 15px;
+            overflow: hidden;
+            height: 350px;
+        }
+
+        .collection-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+
+        .collection-item:hover img {
+            transform: scale(1.1);
+        }
+
+        .collection-overlay {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            padding: 20px;
+            background: linear-gradient(to top, rgba(0, 0, 0, 0.7), transparent);
+            color: white;
+        }
+
+        .collection-overlay h3 {
+            font-size: 1.5rem;
+            margin-bottom: 5px;
+        }
+
+        /* ===== Testimonials ===== */
+        .testimonials {
+            padding: 100px 0;
+            background: var(--light);
+        }
+
+        .testimonial-slider {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .testimonial-card {
+            background: white;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+            text-align: center;
+        }
+
+        .testimonial-avatar {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            overflow: hidden;
+            margin: 0 auto 20px;
+        }
+
+        .testimonial-avatar img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .testimonial-content p {
+            font-style: italic;
+            margin-bottom: 20px;
+        }
+
+        .testimonial-author h4 {
+            font-size: 1.2rem;
+            margin-bottom: 5px;
+        }
+
+        .testimonial-author p {
+            color: var(--primary);
+            font-size: 0.9rem;
+        }
+
+        /* ===== Contact Section ===== */
+        .contact {
+            padding: 100px 0;
+            background: white;
+        }
+
+        .contact-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 50px;
+        }
+
+        .contact-info h3 {
+            font-size: 2rem;
+            margin-bottom: 20px;
+        }
+
+        .contact-details {
+            margin-bottom: 30px;
+        }
+
+        .contact-detail {
+            display: flex;
+            align-items: center;
+            margin-bottom: 15px;
+        }
+
+        .contact-icon {
+            width: 40px;
+            height: 40px;
+            background: var(--accent);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 15px;
+            color: var(--secondary);
+        }
+
+        .contact-form {
+            background: var(--light);
+            padding: 30px;
+            border-radius: 15px;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 500;
+        }
+
+        .form-group input,
+        .form-group textarea {
+            width: 100%;
+            padding: 12px 15px;
+            border: 1px solid #e0d6cc;
+            border-radius: 8px;
+            font-family: 'Montserrat', sans-serif;
+        }
+
+        .form-group textarea {
+            height: 150px;
+        }
+
+        .submit-btn {
+            background: var(--primary);
+            color: white;
+            border: none;
+            padding: 12px 30px;
+            border-radius: 30px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .submit-btn:hover {
+            background: var(--secondary);
+        }
+
+        /* ===== Footer ===== */
+        footer {
+            background: var(--dark);
+            color: white;
+            padding: 70px 0 20px;
+        }
+
+        .footer-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 40px;
+            margin-bottom: 50px;
+        }
+
+        .footer-col h4 {
+            font-size: 1.3rem;
+            margin-bottom: 25px;
+            position: relative;
+            padding-bottom: 10px;
+        }
+
+        .footer-col h4::after {
+            content: '';
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            width: 50px;
+            height: 2px;
+            background: var(--primary);
+        }
+
+        .footer-col p {
+            color: #c2b8ae;
+            margin-bottom: 20px;
+        }
+
+        .social-links {
+            display: flex;
+            gap: 15px;
+            margin-top: 20px;
+        }
+
+        .social-links a {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 40px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 50%;
+            transition: all 0.3s ease;
+        }
+
+        .social-links a:hover {
+            background: var(--primary);
+            transform: translateY(-3px);
+        }
+
+        .footer-col ul {
+            list-style: none;
+        }
+
+        .footer-col ul li {
+            margin-bottom: 12px;
+        }
+
+        .footer-col ul li a {
+            color: #c2b8ae;
+            transition: color 0.3s ease;
+        }
+
+        .footer-col ul li a:hover {
+            color: var(--primary);
+        }
+
+        .copyright {
+            text-align: center;
+            padding-top: 20px;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            color: #c2b8ae;
+            font-size: 0.9rem;
+        }
+
+        /* ===== Responsive Design ===== */
+        @media (max-width: 992px) {
+            .about-container {
+                grid-template-columns: 1fr;
+            }
+
+            .about-img {
+                order: -1;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+
+            .contact-container {
+                grid-template-columns: 1fr;
+            }
+
+            nav ul {
+                display: none;
+            }
+        }
+
+        @media (max-width: 576px) {
+            .hero-buttons {
+                flex-direction: column;
+                gap: 10px;
+            }
+
+            .btn {
+                width: 100%;
+                text-align: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container header-container">
+            <div class="logo">Mardeeq <span>Ltd</span></div>
+            <nav>
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#collections">Collections</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="container">
+            <h1>Elegant Bridal Fashion & Trade</h1>
+            <p>Mardeeq Ltd specializes in exquisite bridal wear, wholesale trade, and fashion merchandise for discerning clients worldwide.</p>
+            <div class="hero-buttons">
+                <a href="#collections" class="btn btn-primary">View Collections</a>
+                <a href="#contact" class="btn btn-secondary">Contact Us</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about" id="about">
+        <div class="container">
+            <div class="section-title">
+                <h2>About Mardeeq Ltd</h2>
+                <p>Discover our journey in bringing luxury bridal fashion to the global market.</p>
+            </div>
+            <div class="about-container">
+                <div class="about-content">
+                    <h3>Your Trusted Bridal Fashion Partner</h3>
+                    <p>Founded in 2016, Mardeeq Ltd has established itself as a premier supplier of high-quality bridal wear, serving boutiques, retailers, and brides across the world.</p>
+                    <p>We combine traditional craftsmanship with contemporary designs to create stunning collections that cater to diverse tastes and cultures.</p>
+                    <a href="#services" class="btn btn-primary">Our Services</a>
+                </div>
+                <div class="about-img">
+                    <img src="https://images.unsplash.com/photo-1529633980627-4dfae1c2a0e3?ixlib=rb-4.0.3&auto=format&fit=crop&w=1170&q=80" alt="Bridal Fashion">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="services" id="services">
+        <div class="container">
+            <div class="section-title">
+                <h2>Our Services</h2>
+                <p>Comprehensive solutions for bridal fashion businesses and retailers.</p>
+            </div>
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-tshirt"></i>
+                    </div>
+                    <h3>Bridal Wear</h3>
+                    <p>Exquisite wedding dresses, veils, and accessories for brides and boutiques.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-people-carry"></i>
+                    </div>
+                    <h3>Wholesale Trade</h3>
+                    <p>Bulk orders for retailers with competitive pricing and flexible terms.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-warehouse"></i>
+                    </div>
+                    <h3>Merchandise Supply</h3>
+                    <p>Complete bridal shop setups including displays, packaging, and branding.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-globe"></i>
+                    </div>
+                    <h3>Global Distribution</h3>
+                    <p>Worldwide shipping and logistics support for international clients.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Collections Section -->
+    <section class="collections" id="collections">
+        <div class="container">
+            <div class="section-title">
+                <h2>Bridal Collections</h2>
+                <p>Explore our latest bridal fashion lines available for wholesale and retail.</p>
+            </div>
+            <div class="collections-grid">
+                <div class="collection-item">
+                    <img src="https://images.unsplash.com/photo-1539109136881-3be0616ac5d7?ixlib=rb-4.0.3&auto=format&fit=crop&w=687&q=80" alt="Classic Collection">
+                    <div class="collection-overlay">
+                        <h3>Classic Elegance</h3>
+                        <p>Timeless designs for traditional brides</p>
+                    </div>
+                </div>
+                <div class="collection-item">
+                    <img src="https://images.unsplash.com/photo-1519657337289-077653f724ed?ixlib=rb-4.0.3&auto=format&fit=crop&w=1170&q=80" alt="Modern Collection">
+                    <div class="collection-overlay">
+                        <h3>Modern Romance</h3>
+                        <p>Contemporary styles with a touch of glamour</p>
+                    </div>
+                </div>
+                <div class="collection-item">
+                    <img src="https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?ixlib=rb-4.0.3&auto=format&fit=crop&w=720&q=80" alt="Boho Collection">
+                    <div class="collection-overlay">
+                        <h3>Bohemian Dreams</h3>
+                        <p>Free-spirited designs for unconventional brides</p>
+                    </div>
+                </div>
+                <div class="collection-item">
+                    <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?ixlib=rb-4.0.3&auto=format&fit=crop&w=764&q=80" alt="Luxury Collection">
+                    <div class="collection-overlay">
+                        <h3>Luxury Couture</h3>
+                        <p>High-end bridal fashion for discerning clients</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="testimonials">
+        <div class="container">
+            <div class="section-title">
+                <h2>Client Testimonials</h2>
+                <p>What our partners say about working with us.</p>
+            </div>
+            <div class="testimonial-slider">
+                <div class="testimonial-card">
+                    <div class="testimonial-avatar">
+                        <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?ixlib=rb-4.0.3&auto=format&fit=crop&w=688&q=80" alt="Sarah Johnson">
+                    </div>
+                    <div class="testimonial-content">
+                        <p>"Mardeeq Ltd has been our trusted bridal supplier for 5 years. Their quality and service are unmatched in the industry."</p>
+                    </div>
+                    <div class="testimonial-author">
+                        <h4>Nusaiba Abdullahi</h4>
+                        <p>Owner, Bridal Elegance Boutique</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact" id="contact">
+        <div class="container">
+            <div class="section-title">
+                <h2>Get In Touch</h2>
+                <p>Contact us for wholesale inquiries, collaborations, or retail purchases.</p>
+            </div>
+            <div class="contact-container">
+                <div class="contact-info">
+                    <h3>Let's Work Together</h3>
+                    <div class="contact-details">
+                        <div class="contact-detail">
+                            <div class="contact-icon">
+                                <i class="fas fa-map-marker-alt"></i>
+                            </div>
+                            <div>
+                                <h4>Our Showroom</h4>
+                                <p>4 Ladega str. Chevy View Estate, Lekki, Lagos, Nigeria</p>
+                            </div>
+                        </div>
+                        <div class="contact-detail">
+                            <div class="contact-icon">
+                                <i class="fas fa-phone-alt"></i>
+                            </div>
+                            <div>
+                                <h4>Call Us</h4>
+                                <p>+2349014804095</p>
+                            </div>
+                        </div>
+                        <div class="contact-detail">
+                            <div class="contact-icon">
+                                <i class="fas fa-envelope"></i>
+                            </div>
+                            <div>
+                                <h4>Email Us</h4>
+                                <p>info@mardeeqbridal.com</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-pinterest-p"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+                <div class="contact-form">
+                    <form>
+                        <div class="form-group">
+                            <label for="name">Full Name</label>
+                            <input type="text" id="name" placeholder="Your Name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email</label>
+                            <input type="email" id="email" placeholder="Your Email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="subject">Subject</label>
+                            <input type="text" id="subject" placeholder="Wholesale Inquiry">
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Message</label>
+                            <textarea id="message" placeholder="Your Message" required></textarea>
+                        </div>
+                        <button type="submit" class="submit-btn">Send Message</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-container">
+                <div class="footer-col">
+                    <div class="logo">Mardeeq <span>Ltd</span></div>
+                    <p>Your premier partner in bridal fashion, trade, and merchandise since 2016.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-pinterest-p"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#about">About Us</a></li>
+                        <li><a href="#services">Services</a></li>
+                        <li><a href="#collections">Collections</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Services</h4>
+                    <ul>
+                        <li><a href="#">Bridal Wear</a></li>
+                        <li><a href="#">Wholesale Trade</a></li>
+                        <li><a href="#">Merchandise</a></li>
+                        <li><a href="#">Global Distribution</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Newsletter</h4>
+                    <p>Subscribe for updates on new collections and trade offers.</p>
+                    <form>
+                        <div class="form-group">
+                            <input type="email" placeholder="Your Email" required>
+                        </div>
+                        <button type="submit" class="submit-btn">Subscribe</button>
+                    </form>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2025 Mardeeq Ltd. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+
+        // Header scroll effect
+        window.addEventListener('scroll', function() {
+            const header = document.querySelector('header');
+            if (window.scrollY > 100) {
+                header.style.boxShadow = '0 5px 20px rgba(0, 0, 0, 0.1)';
+                header.style.padding = '10px 0';
+            } else {
+                header.style.boxShadow = '0 2px 15px rgba(0, 0, 0, 0.05)';
+                header.style.padding = '15px 0';
+            }
+        });
+
+        // Form submission
+        const contactForm = document.querySelector('.contact-form form');
+        contactForm.addEventListener('submit', function(e) {
+            e.preventDefault();
+            alert('Thank you for your message! We will contact you soon.');
+            contactForm.reset();
+        });
+    </script>
+</body>
+</html>
+                        <i class="fas fa-warehouse"></i>
+                    </div>
+                    <h3>Merchandise Supply</h3>
+                    <p>Complete bridal shop setups including displays, packaging, and branding.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-globe"></i>
+                    </div>
+                    <h3>Global Distribution</h3>
+                    <p>Worldwide shipping and logistics support for international clients.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Collections Section -->
+    <section class="collections" id="collections">
+        <div class="container">
+            <div class="section-title">
+                <h2>Bridal Collections</h2>
+                <p>Explore our latest bridal fashion lines available for wholesale and retail.</p>
+            </div>
+            <div class="collections-grid">
+                <div class="collection-item">
+                    <img src="https://images.unsplash.com/photo-1539109136881-3be0616ac5d7?ixlib=rb-4.0.3&auto=format&fit=crop&w=687&q=80" alt="Classic Collection">
+                    <div class="collection-overlay">
+                        <h3>Classic Elegance</h3>
+                        <p>Timeless designs for traditional brides</p>
+                    </div>
+                </div>
+                <div class="collection-item">
+                    <img src="https://images.unsplash.com/photo-1519657337289-077653f724ed?ixlib=rb-4.0.3&auto=format&fit=crop&w=1170&q=80" alt="Modern Collection">
+                    <div class="collection-overlay">
+                        <h3>Modern Romance</h3>
+                        <p>Contemporary styles with a touch of glamour</p>
+                    </div>
+                </div>
+                <div class="collection-item">
+                    <img src="https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?ixlib=rb-4.0.3&auto=format&fit=crop&w=720&q=80" alt="Boho Collection">
+                    <div class="collection-overlay">
+                        <h3>Bohemian Dreams</h3>
+                        <p>Free-spirited designs for unconventional brides</p>
+                    </div>
+                </div>
+                <div class="collection-item">
+                    <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?ixlib=rb-4.0.3&auto=format&fit=crop&w=764&q=80" alt="Luxury Collection">
+                    <div class="collection-overlay">
+                        <h3>Luxury Couture</h3>
+                        <p>High-end bridal fashion for discerning clients</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="testimonials">
+        <div class="container">
+            <div class="section-title">
+                <h2>Client Testimonials</h2>
+                <p>What our partners say about working with us.</p>
+            </div>
+            <div class="testimonial-slider">
+                <div class="testimonial-card">
+                    <div class="testimonial-avatar">
+                        <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?ixlib=rb-4.0.3&auto=format&fit=crop&w=688&q=80" alt="Sarah Johnson">
+                    </div>
+                    <div class="testimonial-content">
+                        <p>"Mardeeq Ltd has been our trusted bridal supplier for 5 years. Their quality and service are unmatched in the industry."</p>
+                    </div>
+                    <div class="testimonial-author">
+                        <h4>Nusaiba Abdullahi</h4>
+                        <p>Owner, Bridal Elegance Boutique</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact" id="contact">
+        <div class="container">
+            <div class="section-title">
+                <h2>Get In Touch</h2>
+                <p>Contact us for wholesale inquiries, collaborations, or retail purchases.</p>
+            </div>
+            <div class="contact-container">
+                <div class="contact-info">
+                    <h3>Let's Work Together</h3>
+                    <div class="contact-details">
+                        <div class="contact-detail">
+                            <div class="contact-icon">
+                                <i class="fas fa-map-marker-alt"></i>
+                            </div>
+                            <div>
+                                <h4>Our Showroom</h4>
+                                <p>4 Ladega str. Chevy View Estate, Lekki, Lagos, Nigeria</p>
+                            </div>
+                        </div>
+                        <div class="contact-detail">
+                            <div class="contact-icon">
+                                <i class="fas fa-phone-alt"></i>
+                            </div>
+                            <div>
+                                <h4>Call Us</h4>
+                                <p>+2349014804095</p>
+                            </div>
+                        </div>
+                        <div class="contact-detail">
+                            <div class="contact-icon">
+                                <i class="fas fa-envelope"></i>
+                            </div>
+                            <div>
+                                <h4>Email Us</h4>
+                                <p>info@mardeeqbridal.com</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-pinterest-p"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+                <div class="contact-form">
+                    <form>
+                        <div class="form-group">
+                            <label for="name">Full Name</label>
+                            <input type="text" id="name" placeholder="Your Name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email</label>
+                            <input type="email" id="email" placeholder="Your Email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="subject">Subject</label>
+                            <input type="text" id="subject" placeholder="Wholesale Inquiry">
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Message</label>
+                            <textarea id="message" placeholder="Your Message" required></textarea>
+                        </div>
+                        <button type="submit" class="submit-btn">Send Message</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-container">
+                <div class="footer-col">
+                    <div class="logo">Mardeeq <span>Ltd</span></div>
+                    <p>Your premier partner in bridal fashion, trade, and merchandise since 2016.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-pinterest-p"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#about">About Us</a></li>
+                        <li><a href="#services">Services</a></li>
+                        <li><a href="#collections">Collections</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Services</h4>
+                    <ul>
+                        <li><a href="#">Bridal Wear</a></li>
+                        <li><a href="#">Wholesale Trade</a></li>
+                        <li><a href="#">Merchandise</a></li>
+                        <li><a href="#">Global Distribution</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Newsletter</h4>
+                    <p>Subscribe for updates on new collections and trade offers.</p>
+                    <form>
+                        <div class="form-group">
+                            <input type="email" placeholder="Your Email" required>
+                        </div>
+                        <button type="submit" class="submit-btn">Subscribe</button>
+                    </form>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2025 Mardeeq Ltd. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+
+        // Header scroll effect
+        window.addEventListener('scroll', function() {
+            const header = document.querySelector('header');
+            if (window.scrollY > 100) {
+                header.style.boxShadow = '0 5px 20px rgba(0, 0, 0, 0.1)';
+                header.style.padding = '10px 0';
+            } else {
+                header.style.boxShadow = '0 2px 15px rgba(0, 0, 0, 0.05)';
+                header.style.padding = '15px 0';
+            }
+        });
+
+        // Form submission
+        const contactForm = document.querySelector('.contact-form form');
+        contactForm.addEventListener('submit', function(e) {
+            e.preventDefault();
+            alert('Thank you for your message! We will contact you soon.');
+            contactForm.reset();
+        });
+    </script>
+</body>
+</html>
